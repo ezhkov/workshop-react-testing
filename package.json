@@ -12,7 +12,10 @@
     "setupFilesAfterEnv": [
       "jest-enzyme"
     ],
-    "testEnvironment": "enzyme"
+    "testEnvironment": "enzyme",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "importSort": {
     ".js, .jsx": {
@@ -53,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-tabs": "^3.0.0"
   }
 }
