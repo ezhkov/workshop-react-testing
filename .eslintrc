@@ -7,6 +7,8 @@
     "document": false
   },
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/extensions": false,
+    "react/prefer-stateless-function": false
   }
 }
