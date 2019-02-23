@@ -9,23 +9,23 @@ export default function Tabs() {
   return (
     <TabsContainer>
       <TabList>
-        <Tab>Tab header 1</Tab>
-        <Tab>Tab header 2</Tab>
-        <Tab>Tab header 3</Tab>
-        <Tab>Tab header 4</Tab>
+        <Tab><span data-test="tab">Tab header 1</span></Tab>
+        <Tab><span data-test="tab">Tab header 2</span></Tab>
+        <Tab><span data-test="tab">Tab header 3</span></Tab>
+        <Tab><span data-test="tab">Tab header 4</span></Tab>
       </TabList>
 
       <TabPanel>
-        Tab panel 1 content
+        <div data-test="tabContent">Tab panel 1 content</div>
       </TabPanel>
       <TabPanel>
-        Tab panel 2 content
+        <div data-test="tabContent">Tab panel 2 content</div>
       </TabPanel>
       <TabPanel>
-        Tab panel 3 content
+        <div data-test="tabContent">Tab panel 3 content</div>
       </TabPanel>
       <TabPanel>
-        Tab panel 4 content
+        <div data-test="tabContent">Tab panel 4 content</div>
       </TabPanel>
     </TabsContainer>
   );
