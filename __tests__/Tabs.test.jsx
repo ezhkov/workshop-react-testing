@@ -1,6 +1,6 @@
 import React from 'react';
-import Tabs from '..';
 import { shallow, mount } from 'enzyme';
+import Tabs from '../src/components/Tabs';
 
 describe('Tabs', () => {
   it('renders correctly', () => {
