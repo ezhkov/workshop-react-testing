@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "npm test && webpack --mode production"
+  },
+  "env": {
+    "DEBUG": "setState:"
   },
   "jest": {
     "setupFilesAfterEnv": [
       "jest-enzyme"
     ],
     "testEnvironment": "enzyme",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     }
@@ -29,6 +36,7 @@
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -37,6 +45,7 @@
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
     "html-webpack-plugin": "^3.2.0",
     "import-sort-style-react2": "^0.3.5",
     "jest": "^24.1.0",
@@ -50,11 +59,13 @@
   },
   "dependencies": {
     "@types/jest": "^24.0.6",
+    "debug": "^4.1.1",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "nanoid": "^2.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-tabs": "^3.0.0"

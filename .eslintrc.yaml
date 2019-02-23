@@ -5,5 +5,6 @@ env:
   jest: true
 globals:
   document: false
+parser: "babel-eslint"
 rules:
   react/prefer-stateless-function: false
