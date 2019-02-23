@@ -1,92 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Check if tabs renders render 1`] = `
-<Tabs
-  defaultFocus={false}
-  defaultIndex={null}
-  forceRenderTabPanel={false}
-  selectedIndex={null}
->
-  <TabList
-    className="react-tabs__tab-list"
-  >
-    <Tab
-      className="react-tabs__tab"
-      disabledClassName="react-tabs__tab--disabled"
-      focus={false}
-      id={null}
-      panelId={null}
-      selected={false}
-      selectedClassName="react-tabs__tab--selected"
-    >
-      Tab header 1
-    </Tab>
-    <Tab
-      className="react-tabs__tab"
-      disabledClassName="react-tabs__tab--disabled"
-      focus={false}
-      id={null}
-      panelId={null}
-      selected={false}
-      selectedClassName="react-tabs__tab--selected"
-    >
-      Tab header 2
-    </Tab>
-    <Tab
-      className="react-tabs__tab"
-      disabledClassName="react-tabs__tab--disabled"
-      focus={false}
-      id={null}
-      panelId={null}
-      selected={false}
-      selectedClassName="react-tabs__tab--selected"
-    >
-      Tab header 3
-    </Tab>
-    <Tab
-      className="react-tabs__tab"
-      disabledClassName="react-tabs__tab--disabled"
-      focus={false}
-      id={null}
-      panelId={null}
-      selected={false}
-      selectedClassName="react-tabs__tab--selected"
-    >
-      Tab header 4
-    </Tab>
-  </TabList>
-  <TabPanel
-    className="react-tabs__tab-panel"
-    forceRender={false}
-    selectedClassName="react-tabs__tab-panel--selected"
-  >
-    Tab panel 1 content
-  </TabPanel>
-  <TabPanel
-    className="react-tabs__tab-panel"
-    forceRender={false}
-    selectedClassName="react-tabs__tab-panel--selected"
-  >
-    Tab panel 2 content
-  </TabPanel>
-  <TabPanel
-    className="react-tabs__tab-panel"
-    forceRender={false}
-    selectedClassName="react-tabs__tab-panel--selected"
-  >
-    Tab panel 3 content
-  </TabPanel>
-  <TabPanel
-    className="react-tabs__tab-panel"
-    forceRender={false}
-    selectedClassName="react-tabs__tab-panel--selected"
-  >
-    Tab panel 4 content
-  </TabPanel>
-</Tabs>
-`;
-
-exports[`Check if tabs renders render tabs with variable tabs 1`] = `
+exports[`Check if tabs renders Check if renders exact tab 1`] = `
 <Tabs>
   <Tabs
     defaultFocus={false}
@@ -278,5 +192,91 @@ exports[`Check if tabs renders render tabs with variable tabs 1`] = `
       </div>
     </UncontrolledTabs>
   </Tabs>
+</Tabs>
+`;
+
+exports[`Check if tabs renders render 1`] = `
+<Tabs
+  defaultFocus={false}
+  defaultIndex={null}
+  forceRenderTabPanel={false}
+  selectedIndex={null}
+>
+  <TabList
+    className="react-tabs__tab-list"
+  >
+    <Tab
+      className="react-tabs__tab"
+      disabledClassName="react-tabs__tab--disabled"
+      focus={false}
+      id={null}
+      panelId={null}
+      selected={false}
+      selectedClassName="react-tabs__tab--selected"
+    >
+      Tab header 1
+    </Tab>
+    <Tab
+      className="react-tabs__tab"
+      disabledClassName="react-tabs__tab--disabled"
+      focus={false}
+      id={null}
+      panelId={null}
+      selected={false}
+      selectedClassName="react-tabs__tab--selected"
+    >
+      Tab header 2
+    </Tab>
+    <Tab
+      className="react-tabs__tab"
+      disabledClassName="react-tabs__tab--disabled"
+      focus={false}
+      id={null}
+      panelId={null}
+      selected={false}
+      selectedClassName="react-tabs__tab--selected"
+    >
+      Tab header 3
+    </Tab>
+    <Tab
+      className="react-tabs__tab"
+      disabledClassName="react-tabs__tab--disabled"
+      focus={false}
+      id={null}
+      panelId={null}
+      selected={false}
+      selectedClassName="react-tabs__tab--selected"
+    >
+      Tab header 4
+    </Tab>
+  </TabList>
+  <TabPanel
+    className="react-tabs__tab-panel"
+    forceRender={false}
+    selectedClassName="react-tabs__tab-panel--selected"
+  >
+    Tab panel 1 content
+  </TabPanel>
+  <TabPanel
+    className="react-tabs__tab-panel"
+    forceRender={false}
+    selectedClassName="react-tabs__tab-panel--selected"
+  >
+    Tab panel 2 content
+  </TabPanel>
+  <TabPanel
+    className="react-tabs__tab-panel"
+    forceRender={false}
+    selectedClassName="react-tabs__tab-panel--selected"
+  >
+    Tab panel 3 content
+  </TabPanel>
+  <TabPanel
+    className="react-tabs__tab-panel"
+    forceRender={false}
+    selectedClassName="react-tabs__tab-panel--selected"
+  >
+    Tab panel 4 content
+  </TabPanel>
 </Tabs>
 `;
