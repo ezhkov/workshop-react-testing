@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xml:base="http://www.nasa.gov/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/"> <channel> <title>Education News</title>
+ <description>A RSS feed containing the latest education related news from NASA.</description>
+ <link>http://www.nasa.gov/</link>
+ <atom:link rel="self" href="http://www.nasa.gov/rss/dyn/educationnews.rss" />
+ <language>en-us</language>
+ <managingEditor>sandra.b.may@nasa.gov</managingEditor>
+ <webMaster>brian.dunbar@nasa.gov</webMaster>
+ <item> <title>BIG Idea Challenge 2019 Finalists to Develop Planetary Greenhouse Concepts</title>
+ <link>http://www.nasa.gov/feature/langley/big-idea-challenge-2019-finalists-to-develop-planetary-greenhouse-concepts</link>
+ <description>No drive-through? No problem. University students are designing greenhouses so astronauts can grow their own food on Mars.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/screen_shot_2019-02-04_at_9.19.40_am.png?itok=xWiVx6iU" length="2175015" type="image/png" />
+ <guid isPermaLink="false">http://www.nasa.gov/feature/langley/big-idea-challenge-2019-finalists-to-develop-planetary-greenhouse-concepts</guid>
+ <pubDate>Mon, 04 Feb 2019 16:00 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>Learning on the Job: Student Rocket Launches From Norway</title>
+ <link>http://www.nasa.gov/feature/goddard/2019/learning-on-the-job-student-rocket-launches-from-norway</link>
+ <description>The G-CHASER rocket launched from the Andøya Space Center in Andenes, Norway, on Jan. 13, 2019. On its way through the northern lights, it carried seven different experiments, each one designed, tested and built by students.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/46018_launch.jpg?itok=2AY5qftE" length="823474" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/feature/goddard/2019/learning-on-the-job-student-rocket-launches-from-norway</guid>
+ <pubDate>Mon, 04 Feb 2019 11:30 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>California Students to Speak with NASA Astronaut Aboard Space Station</title>
+ <link>http://www.nasa.gov/press-release/california-students-to-speak-with-nasa-astronaut-aboard-space-station</link>
+ <description>Elementary school students from California will have an opportunity to talk with a NASA astronaut aboard the International Space Station next week.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/m19-001.png?itok=0HnqmkMZ" length="1128758" type="image/png" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/california-students-to-speak-with-nasa-astronaut-aboard-space-station</guid>
+ <pubDate>Fri, 01 Feb 2019 10:23 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>NASA, National Science Foundation Announce Support for White House STEM Engagement Plan</title>
+ <link>http://www.nasa.gov/press-release/nasa-national-science-foundation-announce-support-for-white-house-stem-engagement-plan</link>
+ <description>NASA and the National Science Foundation (NSF), in partnership with other federal agencies, have committed to a White House-led effort to strengthen education in science, technology, engineering and math (STEM).</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/18-112.jpg?itok=OY6C8fA8" length="5361139" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-national-science-foundation-announce-support-for-white-house-stem-engagement-plan</guid>
+ <pubDate>Tue, 04 Dec 2018 15:17 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>Radio JOVE From NASA: Tuning In to Your Local Celestial Radio Show</title>
+ <link>http://www.nasa.gov/feature/goddard/2018/tuning-in-to-your-local-celestial-radio-show</link>
+ <description>What does Jupiter sound like? If you had to take a guess, would you imagine the sharp staccato of popcorn popping? The slow static of waves reaching the shore? The universe is full of radio emissions, and all you need to hear them for yourself is a box the size of a DVD player.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/jupiter_magnetophere_r01_pdaurora2.jpg?itok=AKfwjmL_" length="1526502" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/feature/goddard/2018/tuning-in-to-your-local-celestial-radio-show</guid>
+ <pubDate>Tue, 04 Dec 2018 14:00 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>Florida Students to Speak with First Cuban-American Astronaut on Space Station</title>
+ <link>http://www.nasa.gov/press-release/florida-students-to-speak-with-first-cuban-american-astronaut-on-space-station</link>
+ <description>Elementary school students from Florida will talk live this week with the first Cuban-American astronaut to live and work aboard the International Space Station.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/downlink_media_advisory_picture_-_week_of_12-2.jpg?itok=_2EjIBXi" length="3312553" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/florida-students-to-speak-with-first-cuban-american-astronaut-on-space-station</guid>
+ <pubDate>Tue, 04 Dec 2018 12:56 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>NASA Selects Universities for New Rapid Response Research Programs, Space Station Flight Opportunity</title>
+ <link>http://www.nasa.gov/feature/nasa-selects-universities-for-new-rapid-response-research-programs-space-station-flight</link>
+ <description>Research looking into resources from the Moon and Mars, improving gene testing and creating technology for advanced missions to Venus are among several projects selected to receive awards from NASA&#039;s Established Program to Stimulate Competitive Research (EPSCoR).</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/nasa-logo-web-rgb.jpg?itok=t5eZp57o" length="189751" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/feature/nasa-selects-universities-for-new-rapid-response-research-programs-space-station-flight</guid>
+ <pubDate>Thu, 15 Nov 2018 19:44 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>New York Students to Speak with Astronaut Aboard Space Station</title>
+ <link>http://www.nasa.gov/press-release/new-york-students-to-speak-with-astronaut-aboard-space-station</link>
+ <description>NASA astronaut Serena Auñón-Chancellor, currently orbiting Earth as part of the International Space Station’s Expedition 57 crew, will answer questions from students at New York’s University Prep Charter High School at 11:05 a.m. EST Friday, Nov. 16.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/m18-172.jpg?itok=JBZiKOfn" length="2847432" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/new-york-students-to-speak-with-astronaut-aboard-space-station</guid>
+ <pubDate>Tue, 13 Nov 2018 16:18 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>NASA Looks to University Researchers for Innovative Space Tech Solutions</title>
+ <link>http://www.nasa.gov/press-release/nasa-looks-to-university-researchers-for-innovative-space-tech-solutions</link>
+ <description>University-led research could transform the future of space exploration, from small spacecraft to “smart” systems for the Moon, Mars and beyond.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/395411main_fsw_barrel_15_full.jpg?itok=WmN_Ce41" length="56725" type="image/jpeg" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-looks-to-university-researchers-for-innovative-space-tech-solutions</guid>
+ <pubDate>Thu, 08 Nov 2018 13:01 EST</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+ <item> <title>Astronaut Michael Fincke to Visit Pittsburgh with NASA’s Destination Station</title>
+ <link>http://www.nasa.gov/press-release/astronaut-michael-fincke-to-visit-pittsburgh-with-nasa-s-destination-station</link>
+ <description>Astronaut and Pittsburgh native Michael Fincke will visit Pittsburgh as part of NASA’s Destination Station during the week of Nov. 5.</description>
+ <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/fincke_pitt.png?itok=TSCxudb6" length="1223328" type="image/png" />
+ <guid isPermaLink="false">http://www.nasa.gov/press-release/astronaut-michael-fincke-to-visit-pittsburgh-with-nasa-s-destination-station</guid>
+ <pubDate>Wed, 31 Oct 2018 13:24 EDT</pubDate>
+ <source url="http://www.nasa.gov/rss/dyn/educationnews.rss">Education News</source>
+</item>
+</channel>
+</rss>
