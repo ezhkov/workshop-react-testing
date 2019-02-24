@@ -74,7 +74,6 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-tabs": "^3.0.0",
-    "rodal": "^1.6.3",
     "rss-parser": "^3.6.2"
   }
 }

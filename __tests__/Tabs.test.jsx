@@ -10,6 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const tabSelector = 'li[data-test="tab"]';
 const tabListSelector = 'ul[data-test="tabList"]';
+const tabPanelSelector = 'div[data-test="tabPanel"]';
 const tabContentSelector = 'div[data-test="tabContent"]';
 const tabRemoveSelector = '[data-test="removeTab"]';
 const tabAddSelector = '[data-test="addTab"]';
@@ -17,10 +18,10 @@ const tabAddSelector = '[data-test="addTab"]';
 const appSelector = wrapper => ({
   getTabs: () => wrapper.find(tabSelector),
   getTabsList: () => wrapper.find(tabListSelector),
-  getTabsContents: () => wrapper.find(tabContentSelector),
+  getTabsContents: () => wrapper.find(tabPanelSelector),
   getLastTab: () => wrapper.find(tabSelector).last(),
   getNthTab: n => wrapper.find(tabSelector).at(n),
-  getNthTabContent: n => wrapper.find(tabContentSelector).at(n),
+  getNthTabPanel: n => wrapper.find(tabPanelSelector).at(n),
   getNthTabRemove: n => wrapper.find(tabSelector).at(n).find(tabRemoveSelector),
   getAddTab: () => wrapper.find(tabAddSelector),
   clickElement: elem => elem.simulate('click'),
@@ -41,8 +42,8 @@ describe('Tabs Actions', () => {
     const page = appSelector(wrapper);
     const tab = page.getNthTab(3);
     page.clickElement(tab);
-    const needleContent = page.getNthTabContent(3);
-    expect(needleContent.children()).toExist();
+    const needleContent = page.getNthTabPanel(3);
+    expect(needleContent).toContainMatchingElements(1, tabContentSelector);
   });
 
   it('tab has added', () => {
@@ -52,7 +53,8 @@ describe('Tabs Actions', () => {
     const lastIndexToAdd = tabs.length;
     const addTab = page.getAddTab();
     page.clickElement(addTab);
-    expect(page.getNthTab(lastIndexToAdd)).toExist();
+    const tabList = page.getTabsList();
+    expect(tabList).toContainMatchingElements(lastIndexToAdd + 1, tabSelector);
   });
 
   it('tab has removed', () => {
@@ -62,17 +64,17 @@ describe('Tabs Actions', () => {
     const tabsCount = tabs.length;
     const removeTab = page.getNthTabRemove(2);
     page.clickElement(removeTab);
-    expect(page.getNthTab(tabsCount - 1)).not.toExist();
+    const tabList = page.getTabsList();
+    expect(tabList).toContainMatchingElements(tabsCount - 1, tabSelector);
   });
 
   it('exact tab has removed', () => {
     const wrapper = mount(<App />);
     const page = appSelector(wrapper);
-    const needleTab = page.getNthTab(2);
     const needleTabRemove = page.getNthTabRemove(2);
     page.clickElement(needleTabRemove);
-    const newTabs = page.getTabs();
-    expect(newTabs.contains(needleTab)).toBeFalsy();
+    const needleTab = page.getNthTab(2);
+    expect(needleTab).not.toIncludeText('Tab header 3');
   });
 });
 

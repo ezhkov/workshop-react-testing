@@ -1,23 +1,23 @@
 import React from 'react';
 import {
-  Tab, Tabs as TabsContainer, TabList, TabPanel,
+  Tab,
+  Tabs as TabsContainer,
+  TabList,
+  TabPanel,
 } from 'react-tabs';
-import Rodal from 'rodal';
+
 import nanoid from 'nanoid';
 import Cookies from 'js-cookie';
 import Parser from 'rss-parser';
 import getRSS from '../../utils/apiClient';
 
 import 'react-tabs/style/react-tabs.css';
-import 'rodal/lib/rodal.css';
-
 
 export default class Tabs extends React.Component {
   state = {
     activeTab: this.getActiveTab(),
-    showModal: false,
     rssAddress: '',
-    loadingRss: false,
+    tabName: '',
     tabs: [
       {
         title: 'Tab header 1',
@@ -70,18 +70,6 @@ export default class Tabs extends React.Component {
     };
   };
 
-  showModal = () => {
-    this.setState({
-      showModal: true,
-    });
-  };
-
-  hideModal = () => {
-    this.setState({
-      showModal: false,
-    });
-  };
-
   handleRemoveTab = index => () => {
     const { activeTabIndex } = this.state;
     if (index !== activeTabIndex) {
@@ -95,28 +83,30 @@ export default class Tabs extends React.Component {
     }
   };
 
-  handleAddTab = () => {
-    this.showModal();
-  };
-
   handleTabSelect = (index) => {
     this.setActiveTab(index);
   };
 
-  handleInputChange = (e) => {
+  handleInputRssChange = (e) => {
     this.setState({
       rssAddress: e.target.value,
     });
   };
 
+  handleInputTabNameChange = (e) => {
+    this.setState({
+      tabName: e.target.value,
+    });
+  };
+
   handleFormSubmit = async (e) => {
-    const { rssAddress } = this.state;
+    const { rssAddress, tabName } = this.state;
     e.preventDefault();
     const parser = new Parser();
     const result = await getRSS(rssAddress);
     const parsed = await parser.parseString(result.data);
     const newTab = this.makeTab({
-      title: parsed.title,
+      title: tabName,
       items: parsed.items,
     });
     this.setState(prevState => ({
@@ -124,8 +114,8 @@ export default class Tabs extends React.Component {
         ...prevState.tabs,
         newTab,
       ],
-      showModal: false,
       rssAddress: '',
+      tabName: '',
     }));
   };
 
@@ -142,8 +132,8 @@ export default class Tabs extends React.Component {
   renderTabsPanels() {
     const { tabs } = this.state;
     return tabs.map(elem => (
-      <TabPanel key={elem.uid} data-test="tabContent">
-        <div>
+      <TabPanel key={elem.uid} data-test="tabPanel">
+        <div data-test="tabContent">
           { elem.content.map(el => (
             <p key={nanoid()}>{ el }</p>
           )) }
@@ -153,49 +143,26 @@ export default class Tabs extends React.Component {
   }
 
   render() {
-    const { activeTab, showModal, rssAddress } = this.state;
+    const { activeTab, rssAddress, tabName } = this.state;
     return (
       <>
-        <div>
-          <button data-test="addTab" type="button" onClick={this.handleAddTab}>Add tab</button>
-        </div>
+        <form onSubmit={this.handleFormSubmit} style={{ marginBottom: 20, padding: 20, border: '1px solid #ececec', width: 300 }}>
+          <div style={{ marginBottom: 10 }}>
+            <input required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter RSS address" name="rssAddress" id="rssAddress" value={rssAddress} onChange={this.handleInputRssChange} />
+          </div>
+          <div style={{ marginBottom: 10 }}>
+            <input required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter Tab name" name="tabName" id="tabName" value={tabName} onChange={this.handleInputTabNameChange} />
+          </div>
+          <div style={{ marginBottom: 10 }}>
+            <button data-test="addTab" type="submit">Add tab</button>
+          </div>
+        </form>
         <TabsContainer onSelect={this.handleTabSelect} selectedIndex={activeTab}>
           <TabList data-test="tabList">
             { this.renderTabsList() }
           </TabList>
           { this.renderTabsPanels() }
         </TabsContainer>
-        <Rodal visible={showModal} onClose={this.hideModal} data-test="modal">
-          <form
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            action=""
-            onSubmit={this.handleFormSubmit}
-          >
-            <input
-              style={{
-                padding: [0, 8, 0, 0],
-                fontSize: 16,
-              }}
-              required
-              type="text"
-              name="rssAddress"
-              value={rssAddress}
-              onChange={this.handleInputChange}
-            />
-            <button
-              style={{
-
-              }}
-              type="submit"
-            >
-              Save RSS
-            </button>
-          </form>
-        </Rodal>
       </>
     );
   }
