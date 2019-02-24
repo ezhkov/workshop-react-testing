@@ -47,7 +47,7 @@ describe('Tabs Actions', () => {
     const wrapper = mount(<App />);
     const page = appSelector(wrapper);
     const lastTab = page.getLastTab();
-    page.clickElement(lastTab);
+    lastTab.simulate('click');
     const newLastTab = page.getLastTab();
     expect(newLastTab).toHaveProp('aria-selected', 'true');
   });
@@ -56,7 +56,7 @@ describe('Tabs Actions', () => {
     const wrapper = mount(<App />);
     const page = appSelector(wrapper);
     const tab = page.getNthTab(3);
-    page.clickElement(tab);
+    tab.simulate('click');
     const needleContent = page.getNthTabPanel(3);
     expect(needleContent).toContainMatchingElements(1, tabContentSelector);
   });
@@ -82,13 +82,12 @@ describe('Tabs Actions', () => {
     const rssForm = page.getForm();
     const tabs = page.getTabs();
     const tabsCount = tabs.length;
-    page.changeInput(urlInput, 'sample_url');
-    page.changeInput(tabNameInput, 'New async tab');
-    page.clickElement(addTabButton);
-    page.submitForm(rssForm);
+    urlInput.simulate('change', { target: { value: 'sample_url' } });
+    tabNameInput.simulate('change', { target: { value: 'New async tab' } });
+    addTabButton.simulate('click');
+    rssForm.simulate('submit');
     await delay(100);
     wrapper.update();
-    await delay(100);
     const newTabs = page.getTabsList();
     const prevTab = page.getNthTab(tabsCount - 1);
     const lastTab = page.getLastTab();
