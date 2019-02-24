@@ -68,6 +68,7 @@ describe('Tabs Actions', () => {
     const P = new Parser();
     const parsedFixtures = await P.parseString(fixtures);
     const parsedItemsCount = parsedFixtures.items.length;
+    nock.disableNetConnect();
 
     nock(CORS_URL)
       .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
