@@ -30,6 +30,9 @@
       "style": "react2"
     }
   },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
   "author": "Denis Ezhkov",
   "license": "ISC",
   "devDependencies": {
@@ -59,15 +62,19 @@
   },
   "dependencies": {
     "@types/jest": "^24.0.6",
+    "axios": "^0.18.0",
     "debug": "^4.1.1",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "js-cookie": "^2.2.0",
     "nanoid": "^2.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-tabs": "^3.0.0"
+    "react-tabs": "^3.0.0",
+    "rodal": "^1.6.3",
+    "rss-parser": "^3.6.2"
   }
 }
