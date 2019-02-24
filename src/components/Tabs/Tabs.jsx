@@ -43,8 +43,8 @@ export default class Tabs extends React.Component {
   };
 
   getActiveTab() {
-    const activeTab = Cookies.get('curTab') || 1;
-    return Math.min(parseInt(activeTab, 10), 4);
+    const activeTab = Cookies.get('curTab');
+    return Math.min(parseInt(activeTab, 10), 3);
   }
 
   setActiveTab(index) {
@@ -100,10 +100,15 @@ export default class Tabs extends React.Component {
   };
 
   handleFormSubmit = async (e) => {
-    const { rssAddress, tabName } = this.state;
+    const { rssAddress, tabName, tabs } = this.state;
     e.preventDefault();
     const parser = new Parser();
-    const result = await getRSS(rssAddress);
+    let result;
+    result = await getRSS(rssAddress);
+    // try {
+    // } catch (err) {
+    //   throw new Error(err);
+    // }
     const parsed = await parser.parseString(result.data);
     const newTab = this.makeTab({
       title: tabName,
@@ -116,7 +121,9 @@ export default class Tabs extends React.Component {
       ],
       rssAddress: '',
       tabName: '',
-    }));
+    }), () => {
+      this.setActiveTab(tabs.length);
+    });
   };
 
   renderTabsList() {
@@ -135,7 +142,7 @@ export default class Tabs extends React.Component {
       <TabPanel key={elem.uid} data-test="tabPanel">
         <div data-test="tabContent">
           { elem.content.map(el => (
-            <p key={nanoid()}>{ el }</p>
+            <p key={nanoid()} data-test="tabContentElem">{ el }</p>
           )) }
         </div>
       </TabPanel>
@@ -146,12 +153,12 @@ export default class Tabs extends React.Component {
     const { activeTab, rssAddress, tabName } = this.state;
     return (
       <>
-        <form onSubmit={this.handleFormSubmit} style={{ marginBottom: 20, padding: 20, border: '1px solid #ececec', width: 300 }}>
+        <form data-test="addForm" onSubmit={this.handleFormSubmit} style={{ marginBottom: 20, padding: 20, border: '1px solid #ececec', width: 300 }}>
           <div style={{ marginBottom: 10 }}>
-            <input required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter RSS address" name="rssAddress" id="rssAddress" value={rssAddress} onChange={this.handleInputRssChange} />
+            <input data-test="urlInput" required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter RSS address" name="rssAddress" id="rssAddress" value={rssAddress} onChange={this.handleInputRssChange} />
           </div>
           <div style={{ marginBottom: 10 }}>
-            <input required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter Tab name" name="tabName" id="tabName" value={tabName} onChange={this.handleInputTabNameChange} />
+            <input data-test="tabNameInput" required style={{ width: 300, padding: 8, boxSizing: 'border-box' }} type="text" placeholder="Enter Tab name" name="tabName" id="tabName" value={tabName} onChange={this.handleInputTabNameChange} />
           </div>
           <div style={{ marginBottom: 10 }}>
             <button data-test="addTab" type="submit">Add tab</button>
