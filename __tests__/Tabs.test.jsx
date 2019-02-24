@@ -1,12 +1,9 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
 import Cookies from 'js-cookie';
 import App from '../src/components/App';
 
 jest.mock('js-cookie');
-
-Enzyme.configure({ adapter: new Adapter() });
 
 const tabSelector = 'li[data-test="tab"]';
 const tabListSelector = 'ul[data-test="tabList"]';
